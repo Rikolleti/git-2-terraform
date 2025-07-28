@@ -35,10 +35,22 @@
 https://yandex.cloud/ru/docs/compute/concepts/vm-platforms
 И указывать нужно не standart, как было в файле, а standard, с d в конце
 
-6. 
+Также core fractions доступны лишь 20, 50, 100 для v3, а в файле указано 5, также поправил
+
 7. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
 Примечание: К OS ubuntu "out of a box, те из коробки" необходимо подключаться под пользователем ubuntu: ```"ssh ubuntu@vm_ip_address"```. Предварительно убедитесь, что ваш ключ добавлен в ssh-агент: ```eval $(ssh-agent) && ssh-add``` Вы познакомитесь с тем как при создании ВМ создать своего пользователя в блоке metadata в следующей лекции.;
-8. Ответьте, как в процессе обучения могут пригодиться параметры ```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ.
+
+<img width="1510" height="692" alt="Снимок экрана 2025-07-28 в 14 58 14" src="https://github.com/user-attachments/assets/95cf466f-02bf-4f2a-a89e-9f1e4913e025" />
+
+<img width="1510" height="38" alt="Снимок экрана 2025-07-28 в 14 59 04" src="https://github.com/user-attachments/assets/e22a3086-8b21-459f-b1e3-4f45155ddbfe" />
+
+
+9. Ответьте, как в процессе обучения могут пригодиться параметры ```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ.
+
+preemptible = true - Это выбор прерываемой ВМ. Прерываемые виртуальные машины доступны по более низкой цене в сравнении с обычными, однако не обеспечивают отказоустойчивости.
+(https://yandex.cloud/ru/docs/compute/concepts/preemptible-vm)
+
+core_fraction = 5 - Это минимальный уровень производительности. При уровне производительности 5% ВМ будет иметь доступ к физическим ядрам как минимум 5% времени — 50 миллисекунд в течение каждой секунды. (https://yandex.cloud/ru/docs/compute/concepts/performance-levels)
 
 В качестве решения приложите:
 
