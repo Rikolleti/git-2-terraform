@@ -11,6 +11,18 @@ variable "folder_id" {
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id"
 }
 
+variable "vm_resources" {
+  type = map(object({
+    cores         = number
+    memory        = number
+    core_fraction = number
+  }))
+}
+
+variable "metadata" {
+  type = map(string)
+}
+
 variable "default_zone" {
   type        = string
   default     = "ru-central1-a"
@@ -28,6 +40,42 @@ variable "vpc_name" {
   description = "VPC network & subnet name"
 }
 
+variable "vm_web_image_name" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "Image name"
+}
+
+variable "vm_web_instance_platform" {
+  type        = string
+  default     = "standard-v3"
+  description = "Platform name"
+}
+
+variable "vm_web_cores" {
+  type    = number
+  default = 2
+}
+
+variable "vm_web_memory" {
+  type    = number
+  default = 1
+}
+
+variable "vm_web_core_fraction" {
+  type    = number
+  default = 20
+}
+
+variable "landscape" {
+  type        = string
+  default     = "develop"
+}
+
+variable "web" {
+  type        = string
+  default     = "web"
+}
 
 ###ssh vars
 
