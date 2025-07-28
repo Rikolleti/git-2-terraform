@@ -40,9 +40,10 @@ https://yandex.cloud/ru/docs/compute/concepts/vm-platforms
 5. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
 Примечание: К OS ubuntu "out of a box, те из коробки" необходимо подключаться под пользователем ubuntu: ```"ssh ubuntu@vm_ip_address"```. Предварительно убедитесь, что ваш ключ добавлен в ssh-агент: ```eval $(ssh-agent) && ssh-add``` Вы познакомитесь с тем как при создании ВМ создать своего пользователя в блоке metadata в следующей лекции.;
 
-<img width="1510" height="692" alt="Снимок экрана 2025-07-28 в 14 58 14" src="https://github.com/user-attachments/assets/95cf466f-02bf-4f2a-a89e-9f1e4913e025" />
+<img width="685" height="768" alt="Снимок экрана 2025-07-28 в 17 22 52" src="https://github.com/user-attachments/assets/9d589f83-ae90-4f31-92af-5d04c3267054" />
 
-<img width="1510" height="38" alt="Снимок экрана 2025-07-28 в 14 59 04" src="https://github.com/user-attachments/assets/e22a3086-8b21-459f-b1e3-4f45155ddbfe" />
+
+<img width="1429" height="35" alt="Снимок экрана 2025-07-28 в 17 23 03" src="https://github.com/user-attachments/assets/04867ac3-51d5-4a4d-871e-f31f6fc03840" />
 
 
 6. Ответьте, как в процессе обучения могут пригодиться параметры ```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ.
