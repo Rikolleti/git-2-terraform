@@ -33,6 +33,7 @@
 
 Ошибка "Platform "standart-v4" not found" связана с тем что, что в YaCloud есть лишь 3 standard платформы:
 https://yandex.cloud/ru/docs/compute/concepts/vm-platforms
+И указывать нужно не standart, как было в файле, а standard, с d в конце
 
 6. 
 7. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
